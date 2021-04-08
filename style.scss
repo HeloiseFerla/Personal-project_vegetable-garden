@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+$fontFamily1: Indie Flower, sans-serif;
+$fontFamily2: Patrick Hand, sans-serif;
+$fontFamily3: Roboto,sans-serif;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    display: block; 
+    background-color: white;
+    font-family: serif;
+    font-size:16px;
+    text-align: justify;
+    line-height: 1.5;
+}
+h1{
+    font-family: $fontFamily1;
+    text-align: center ;
+    font-size: 3em;
+    padding: 2em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+h2{
+    padding: 5rem 5rem 2rem 5rem;
+    font-family: $fontFamily2;
+
+}
+p{
+    padding: 1rem 5rem;
+    font-family: $fontFamily3;
+}
+body{
+    header{
+
+        nav{
+            position: fixed;
+            background-color: rgb(198, 228, 224);
+
+            width: 100%;
+            ul{
+                display: flex;
+                padding-left: 3rem;
+                li{
+                    list-style: none;
+                    font-size: 1em;
+                    padding: 0.2em 1em   ;
+                    
+                    font-family: $fontFamily2;
+                    text-transform: uppercase;
+
+                    letter-spacing: 0.1em;
+                    a{
+                        text-decoration: none;
+                        color:black;
+                    }
+                }
+            }
+        }
+    }
+    #passion{
+        background-color: rgb(240, 240, 240); 
+        width: 100%;
+        p,h2{
+            text-align: center;
+        }
+        p{
+            font-size: 1.1rem;
+        }
+
+    }
+}

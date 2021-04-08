@@ -1,0 +1,75 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  display: block;
+  background-color: white;
+  font-family: serif;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: Indie Flower, sans-serif;
+  text-align: center;
+  font-size: 3em;
+  padding: 2em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h2 {
+  padding: 5rem 5rem 2rem 5rem;
+  font-family: Patrick Hand, sans-serif;
+}
+
+p {
+  padding: 1rem 5rem;
+  font-family: Roboto, sans-serif;
+}
+
+body header nav {
+  position: fixed;
+  background-color: #c6e4e0;
+  width: 100%;
+}
+
+body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 3rem;
+}
+
+body header nav ul li {
+  list-style: none;
+  font-size: 1em;
+  padding: 0.2em 1em;
+  font-family: Patrick Hand, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+body header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+body #passion {
+  background-color: #f0f0f0;
+  width: 100%;
+}
+
+body #passion p, body #passion h2 {
+  text-align: center;
+}
+
+body #passion p {
+  font-size: 1.1rem;
+}
+/*# sourceMappingURL=style.css.map */
