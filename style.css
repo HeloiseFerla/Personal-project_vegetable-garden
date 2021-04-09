@@ -9,18 +9,72 @@ html, body {
   display: block;
   background-color: white;
   font-family: serif;
-  font-size: 16px;
+  font-size: 1.2vw;
   text-align: justify;
   line-height: 1.5;
 }
 
 h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-family: Indie Flower, sans-serif;
-  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 3em;
   padding: 2em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  background: url("grass.svg");
+  background-size: 11.7em 3.1em;
+  background-position: center 93%;
+  /* center 100% pour que ce soit sur le titre*/
+  width: 11.7em;
+  height: 2em;
+  opacity: 0.25;
+  -webkit-animation: grassMooving ease-out 1.6s .0s;
+          animation: grassMooving ease-out 1.6s .0s;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  background: white;
+  z-index: 1000;
+  background-size: 11.7em 1em;
+  background-position: center;
+  width: 11.7em;
+  height: 1em;
+  bottom: 1.4em;
+}
+
+@-webkit-keyframes grassMooving {
+  from {
+    opacity: 0;
+    background-position: center 0%;
+  }
+  to {
+    background-position: center 93%;
+    opacity: 0.25;
+  }
+}
+
+@keyframes grassMooving {
+  from {
+    opacity: 0;
+    background-position: center 0%;
+  }
+  to {
+    background-position: center 93%;
+    opacity: 0.25;
+  }
 }
 
 h2 {
@@ -35,7 +89,8 @@ p {
 
 body header nav {
   position: fixed;
-  background-color: #c6e4e0;
+  background-color: #c6e4e0 !important;
+  z-index: 10000;
   width: 100%;
 }
 
