@@ -14,71 +14,8 @@ html, body {
   line-height: 1.5;
 }
 
-h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: Indie Flower, sans-serif;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 3em;
-  padding: 2em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  position: relative;
-}
-
-h1::after {
-  content: "";
-  position: absolute;
-  background: url("grass.svg");
-  background-size: 11.7em 3.1em;
-  background-position: center 93%;
-  /* center 100% pour que ce soit sur le titre*/
-  width: 11.7em;
-  height: 2em;
-  opacity: 0.25;
-  -webkit-animation: grassMooving ease-out 1.6s .0s;
-          animation: grassMooving ease-out 1.6s .0s;
-}
-
-h1::before {
-  content: "";
-  position: absolute;
-  background: white;
-  z-index: 1000;
-  background-size: 11.7em 1em;
-  background-position: center;
-  width: 11.7em;
-  height: 1em;
-  bottom: 1.4em;
-}
-
-@-webkit-keyframes grassMooving {
-  from {
-    opacity: 0;
-    background-position: center 0%;
-  }
-  to {
-    background-position: center 93%;
-    opacity: 0.25;
-  }
-}
-
-@keyframes grassMooving {
-  from {
-    opacity: 0;
-    background-position: center 0%;
-  }
-  to {
-    background-position: center 93%;
-    opacity: 0.25;
-  }
-}
-
 h2 {
-  padding: 5rem 5rem 2rem 5rem;
+  padding: 2rem 5rem 2rem 5rem;
   font-family: Patrick Hand, sans-serif;
 }
 
@@ -104,10 +41,10 @@ body header nav ul {
 body header nav ul li {
   list-style: none;
   font-size: 1em;
-  padding: 0.2em 1em;
+  padding: 0.2rem 1rem;
   font-family: Patrick Hand, sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1rem;
 }
 
 body header nav ul li a {
@@ -115,16 +52,401 @@ body header nav ul li a {
   color: black;
 }
 
-body #passion {
+body .title {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+}
+
+body .title h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Indie Flower, sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3rem;
+  padding: 4rem 4rem 0 4rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+body .title h1::after {
+  content: "";
+  position: absolute;
+  background: url("grass.svg");
+  background-size: 35.3rem 8rem;
+  width: 35.3rem;
+  height: 8rem;
+  top: 2rem;
+  opacity: 0.3;
+  -webkit-animation: grassMooving ease-out 2s .0s;
+          animation: grassMooving ease-out 2s .0s;
+}
+
+body .title h1::before {
+  content: "";
+  position: absolute;
+  background: white;
+  background-size: 35.3rem 4.7rem;
+  width: 35.3rem;
+  height: 2rem;
+  bottom: -1rem;
+  z-index: 100;
+}
+
+@-webkit-keyframes grassMooving {
+  from {
+    opacity: 0;
+    top: 4rem;
+  }
+  to {
+    top: 2rem;
+    opacity: 0.3;
+  }
+}
+
+@keyframes grassMooving {
+  from {
+    opacity: 0;
+    top: 4rem;
+  }
+  to {
+    top: 2rem;
+    opacity: 0.3;
+  }
+}
+
+body .title #vegetables {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60rem;
+  height: 15rem;
+  z-index: 1000;
+}
+
+body .title #vegetables #vegetablesScreen {
+  position: relative;
+  height: 15rem;
+  overflow: hidden;
+}
+
+body .title #vegetables #vegetablesScreen #vegetableMainDiv {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0rem;
+  -webkit-transform: translateX(50rem);
+          transform: translateX(50rem);
+  -webkit-animation: moveMainDiv 4s linear;
+          animation: moveMainDiv 4s linear;
+}
+
+@-webkit-keyframes moveMainDiv {
+  0% {
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+  }
+  20% {
+    -webkit-transform: translateX(20rem);
+            transform: translateX(20rem);
+  }
+  40% {
+    -webkit-transform: translateX(30rem);
+            transform: translateX(30rem);
+  }
+  60% {
+    -webkit-transform: translateX(40rem);
+            transform: translateX(40rem);
+  }
+  80% {
+    -webkit-transform: translateX(45rem);
+            transform: translateX(45rem);
+  }
+  100% {
+    -webkit-transform: translateX(50rem);
+            transform: translateX(50rem);
+  }
+}
+
+@keyframes moveMainDiv {
+  0% {
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+  }
+  20% {
+    -webkit-transform: translateX(20rem);
+            transform: translateX(20rem);
+  }
+  40% {
+    -webkit-transform: translateX(30rem);
+            transform: translateX(30rem);
+  }
+  60% {
+    -webkit-transform: translateX(40rem);
+            transform: translateX(40rem);
+  }
+  80% {
+    -webkit-transform: translateX(45rem);
+            transform: translateX(45rem);
+  }
+  100% {
+    -webkit-transform: translateX(50rem);
+            transform: translateX(50rem);
+  }
+}
+
+body .title #vegetables #vegetablesScreen #vegetableMainDiv #vegetableSubDiv {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-transform: translateY(9rem);
+          transform: translateY(9rem);
+  -webkit-animation: moveSubDiv 4s;
+          animation: moveSubDiv 4s;
+}
+
+@-webkit-keyframes moveSubDiv {
+  0% {
+    -webkit-transform: translateY(0rem) rotate(0deg);
+            transform: translateY(0rem) rotate(0deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  20% {
+    -webkit-transform: translateY(9rem) rotate(calc(360deg));
+            transform: translateY(9rem) rotate(calc(360deg));
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  30% {
+    -webkit-transform: translateY(4rem) rotate(calc(540deg));
+            transform: translateY(4rem) rotate(calc(540deg));
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  40% {
+    -webkit-transform: translateY(9rem) rotate(calc(900deg));
+            transform: translateY(9rem) rotate(calc(900deg));
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  50% {
+    -webkit-transform: translateY(6rem) rotate(calc(1100deg));
+            transform: translateY(6rem) rotate(calc(1100deg));
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: translateY(9rem) rotate(calc(1260deg));
+            transform: translateY(9rem) rotate(calc(1260deg));
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  70% {
+    -webkit-transform: translateY(7rem) rotate(calc(1370deg));
+            transform: translateY(7rem) rotate(calc(1370deg));
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  80% {
+    -webkit-transform: translateY(9rem) rotate(calc(1600deg));
+            transform: translateY(9rem) rotate(calc(1600deg));
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  90% {
+    -webkit-transform: translateY(9rem) rotate(calc(1680deg));
+            transform: translateY(9rem) rotate(calc(1680deg));
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  95% {
+    -webkit-transform: translateY(9rem) rotate(calc(1770deg));
+            transform: translateY(9rem) rotate(calc(1770deg));
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  100% {
+    -webkit-transform: translateY(9rem) rotate(calc(1800deg));
+            transform: translateY(9rem) rotate(calc(1800deg));
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+}
+
+@keyframes moveSubDiv {
+  0% {
+    -webkit-transform: translateY(0rem) rotate(0deg);
+            transform: translateY(0rem) rotate(0deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  20% {
+    -webkit-transform: translateY(9rem) rotate(calc(360deg));
+            transform: translateY(9rem) rotate(calc(360deg));
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  30% {
+    -webkit-transform: translateY(4rem) rotate(calc(540deg));
+            transform: translateY(4rem) rotate(calc(540deg));
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  40% {
+    -webkit-transform: translateY(9rem) rotate(calc(900deg));
+            transform: translateY(9rem) rotate(calc(900deg));
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  50% {
+    -webkit-transform: translateY(6rem) rotate(calc(1100deg));
+            transform: translateY(6rem) rotate(calc(1100deg));
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: translateY(9rem) rotate(calc(1260deg));
+            transform: translateY(9rem) rotate(calc(1260deg));
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  70% {
+    -webkit-transform: translateY(7rem) rotate(calc(1370deg));
+            transform: translateY(7rem) rotate(calc(1370deg));
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  80% {
+    -webkit-transform: translateY(9rem) rotate(calc(1600deg));
+            transform: translateY(9rem) rotate(calc(1600deg));
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  90% {
+    -webkit-transform: translateY(9rem) rotate(calc(1680deg));
+            transform: translateY(9rem) rotate(calc(1680deg));
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  95% {
+    -webkit-transform: translateY(9rem) rotate(calc(1770deg));
+            transform: translateY(9rem) rotate(calc(1770deg));
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  100% {
+    -webkit-transform: translateY(9rem) rotate(calc(1800deg));
+            transform: translateY(9rem) rotate(calc(1800deg));
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+}
+
+body .title #vegetables #vegetablesScreen #vegetableMainDiv #vegetableSubDiv img {
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-animation: changeShape 4s;
+          animation: changeShape 4s;
+}
+
+@-webkit-keyframes changeShape {
+  0%, 20%, 28%, 40%, 48%, 60%, 68%, 80%, 98%, 100% {
+    -webkit-transform: scaleX(1) scaleY(1);
+            transform: scaleX(1) scaleY(1);
+  }
+  21%, 41%, 61%, 81% {
+    -webkit-transform: scaleX(1.4) scaleY(0.6);
+            transform: scaleX(1.4) scaleY(0.6);
+  }
+  25%, 45%, 65%, 85% {
+    -webkit-transform: scaleX(0.6) scaleY(1.4);
+            transform: scaleX(0.6) scaleY(1.4);
+  }
+}
+
+@keyframes changeShape {
+  0%, 20%, 28%, 40%, 48%, 60%, 68%, 80%, 98%, 100% {
+    -webkit-transform: scaleX(1) scaleY(1);
+            transform: scaleX(1) scaleY(1);
+  }
+  21%, 41%, 61%, 81% {
+    -webkit-transform: scaleX(1.4) scaleY(0.6);
+            transform: scaleX(1.4) scaleY(0.6);
+  }
+  25%, 45%, 65%, 85% {
+    -webkit-transform: scaleX(0.6) scaleY(1.4);
+            transform: scaleX(0.6) scaleY(1.4);
+  }
+}
+
+body .contenuAccueil #passion {
   background-color: #f0f0f0;
   width: 100%;
 }
 
-body #passion p, body #passion h2 {
+body .contenuAccueil #passion p, body .contenuAccueil #passion h2 {
   text-align: center;
 }
 
-body #passion p {
+body .contenuAccueil #passion p {
   font-size: 1.1rem;
+}
+
+body .contenuAccueil #serre .carousel .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  max-width: 60rem;
+  margin: 0 auto;
+  /*
+    
+                    animation: 20s glisse infinite linear;
+                    
+                    @keyframes glisse {
+                        from{
+                            transform: translateX(0%);
+                            overflow-x: hidden
+                        }
+                        to{
+                            transform: translateX(-66%);
+                            overflow-x: hidden
+                        }
+                        
+                    }
+                    */
+}
+
+body .contenuAccueil #serre .carousel .slider .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 15rem;
+  width: 15rem;
+  background-color: rgba(255, 234, 234, 0.589);
+  border: Black solid 1px;
+}
+
+body .contenuAccueil #serre .carousel .slider .slide img {
+  padding: 0.5rem;
+  height: 15rem;
+  width: 15rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 /*# sourceMappingURL=style.css.map */

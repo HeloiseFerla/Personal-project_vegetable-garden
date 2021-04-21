@@ -20,7 +20,7 @@ html, body {
 }
 
 h2{
-    padding: 5rem 5rem 2rem 5rem;
+    padding: 2rem 5rem 2rem 5rem;
     font-family: $fontFamily2;
 
 }
@@ -42,12 +42,12 @@ body{
                 li{
                     list-style: none;
                     font-size: 1em;
-                    padding: 0.2em 1em ;
+                    padding: 0.2rem 1rem ;
                     
                     font-family: $fontFamily2;
                     text-transform: uppercase;
 
-                    letter-spacing: 0.1em;
+                    letter-spacing: 0.1rem;
                     a{
                         text-decoration: none;
                         color:black;
@@ -55,60 +55,245 @@ body{
                 }
             }
         }
+    }
+    .title{
+        position: relative;
+        width: 100%;
+        height: 15rem;
         h1{
             display:flex;
             font-family: $fontFamily1;
             justify-content: center ;
-            font-size: 3em;
-            padding: 2em;
+            font-size: 3rem;
+            padding: 4rem 4rem 0 4rem;
             letter-spacing: 0.1em;
             text-transform: uppercase;
             position: relative;
+
             &::after{
                 content: "";
                 position: absolute;
                 background: url("grass.svg") ;
-                background-size: 11.7em 3.1em;
-                background-position: center 93% ;/* center 100% pour que ce soit sur le titre*/
-                width: 11.7em; 
-                height: 2em;
-                opacity: 0.25;
-                animation: grassMooving ease-out 1.6s .0s;
+                background-size:35.3rem 8rem ;
+                width: 35.3rem; 
+                height: 8rem;
+                top:2rem;
+                opacity: 0.3;
+                animation: grassMooving ease-out 2s .0s;
+
+
             }
+            
             &::before{
                 content: "";
                 position: absolute;
                 background: white ;
-                z-index: 1000;
-                background-size: 11.7em 1em;
-                background-position: center  ; 
-                width: 11.7em; 
-                height: 1em;
-                bottom: 1.4em;  
+                background-size: 35.3rem 4.7rem;
+                width: 35.3rem; 
+                height: 2rem;
+                bottom: -1rem;  
+                z-index: 100;
             }  
             @keyframes grassMooving{
                 from{
                     opacity: 0;
-                    background-position: center 0% ; 
-        
+                    top:4rem;
                 }
                 to {
-                    background-position: center 93% ; 
-                    opacity: 0.25;
-        
+                    top:2rem;
+                    opacity: 0.3;
                 }
                 
             }
-    }
-    #passion{
-        background-color: rgb(240, 240, 240); 
-        width: 100%;
-        p,h2{
-            text-align: center;
+            
         }
-        p{
-            font-size: 1.1rem;
-        }
+        #vegetables{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 60rem;
+            height: 15rem;
+            z-index: 1000;
+            #vegetablesScreen{
+                position: relative;
+                height: 15rem;
+                overflow: hidden;
 
+                #vegetableMainDiv{
+                    position: absolute;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    top: 0rem;
+                    transform : translateX(50rem);
+                    animation: moveMainDiv 4s linear;
+
+                    @keyframes moveMainDiv{
+                        0% {
+                            transform : translateX(-3rem);
+                        }
+                        20% {
+                            transform : translateX(20rem);
+                        }
+                        40%{
+                            transform : translateX(30rem);
+                        }
+                        60%{
+                            transform : translateX(40rem);
+                        }
+                        80%{
+                            transform : translateX(45rem);
+                        }
+                        100% {
+                            transform : translateX(50rem);
+                        }
+                    }
+
+                    #vegetableSubDiv{
+                        position: absolute;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        transform: translateY(9rem);
+                        animation: moveSubDiv 4s;
+
+
+                        @keyframes moveSubDiv{
+                            0%{
+                                transform: translateY(0rem) rotate(0deg);
+                                animation-timing-function: ease-in;
+                            }
+                            20%{
+                                transform: translateY(9rem) rotate(calc(360deg)) ;
+                                animation-timing-function: ease-out;
+                            }
+                            30%{
+                                transform: translateY(4rem) rotate(calc(540deg));
+                                animation-timing-function: ease-in;
+                            }
+                            40%{
+                                transform: translateY(9rem) rotate(calc(900deg)) ;
+                                animation-timing-function: ease-out;
+                            }
+                            50%{
+                                transform: translateY(6rem) rotate(calc(1100deg));
+                                animation-timing-function: ease-in;
+                            }
+                            60%{
+                                transform: translateY(9rem) rotate(calc(1260deg)) ;
+                                animation-timing-function: ease-out;
+                            }
+                            70%{
+                                transform: translateY(7rem) rotate(calc(1370deg));
+                                animation-timing-function: ease-in;
+                            }
+                            80%{
+                                transform: translateY(9rem) rotate(calc(1600deg));
+                                animation-timing-function: ease-out;
+                            }
+                            90%{
+                                transform: translateY(9rem) rotate(calc(1680deg));
+                                animation-timing-function: linear;
+                            }
+                            95%{
+                                transform: translateY(9rem) rotate(calc(1770deg));
+                                animation-timing-function: linear;
+                            }
+                            100%{
+                                transform: translateY(9rem) rotate(calc(1800deg));
+                                animation-timing-function: linear;
+                            }
+                        }
+
+                        img {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            animation: changeShape 4s;
+                        }
+                        @keyframes changeShape {
+
+                            0%, 20%, 28%, 40%, 48%, 60%, 68%, 80%, 98%, 100% {
+                                transform: scaleX(1.0) scaleY(1.0);
+                            }
+                        
+                            21%, 41%, 61%, 81% { 
+                                transform: scaleX(1.4) scaleY(0.6);
+                            }
+                            25%, 45%, 65%, 85% { 
+                                transform: scaleX(0.6) scaleY(1.4);
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        } 
+    }
+    
+
+    .contenuAccueil{
+
+        #passion{
+            background-color: rgb(240, 240, 240); 
+            width: 100%;
+            p,h2{
+                text-align: center;
+            }
+            p{
+                font-size: 1.1rem;
+            }
+
+        }
+        #serre{
+            .carousel{
+                .slider{
+                    display:flex;
+                    overflow: hidden;
+                    position: relative;
+                    max-width: 60rem;
+                    margin: 0 auto;
+                    
+                    /*
+    
+                    animation: 20s glisse infinite linear;
+                    
+                    @keyframes glisse {
+                        from{
+                            transform: translateX(0%);
+                            overflow-x: hidden
+                        }
+                        to{
+                            transform: translateX(-66%);
+                            overflow-x: hidden
+                        }
+                        
+                    }
+                    */
+                    //animation: infinite glisse;
+                    
+                    .slide{
+                        
+                        display: flex;
+                        flex: 1;
+                        align-items: center;
+                        justify-content: center;
+                        height: 15rem;
+                        width: 15rem;
+                        background-color: rgba(255, 234, 234, 0.589);
+                        border: Black solid 1px;
+    
+                        img{
+                            padding: 0.5rem;
+                            
+                            height: 15rem;
+                            width: 15rem;
+                            object-fit: contain;
+                        
+                        }
+                    }
+            }
+            
+                
+                
+            }   
+        }
     }
 }
